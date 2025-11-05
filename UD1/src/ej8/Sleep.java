@@ -19,16 +19,16 @@ public class Sleep {
 	        ProcessBuilder pb = new ProcessBuilder("sleep", "10");
 
 	        try {
-	            // Iniciar el proceso
+	            // Se inicia el proceso
 	            Process p = pb.start();
 
-	            // Esperar un máximo de 2 segundos a que termine el proceso
+	            // Espera un max  2 seg a que termine el proceso
 	            boolean terminado = p.waitFor(2, TimeUnit.SECONDS);
 
 	            if (!terminado) {
 	                // Si no ha terminado, se finaliza
-	                System.out.println("El proceso tarda demasiado. Se cancela.");
-	                p.destroy(); // O p.destroyForcibly() si queremos forzar
+	                System.out.println("El proceso tardó demasiado. Se cancela.");
+	                p.destroy(); 
 	            } else {
 	                System.out.println("El proceso terminó correctamente.");
 	            }
