@@ -10,7 +10,9 @@ public class Echo {
 	
 	public static void main(String [] argumentos) {
 		try {
-			ProcessBuilder pb = new ProcessBuilder("echo", "hola");
+			//
+			String nombre = "Teresa";
+			ProcessBuilder pb = new ProcessBuilder("echo", "hola, $nombre");
 			Process proceso = pb.start();
 			int codigo = proceso.waitFor();
 			
